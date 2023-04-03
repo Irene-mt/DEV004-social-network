@@ -90,17 +90,16 @@ export const likes = [];
 
 // Crea la colección de posts
 // eslint-disable-next-line
-export const createPost = (post) => {
+export const createPost = (post, ownerPost) => {
   return addDoc(collection(db, 'post'), {
     post,
-    ownerPost: auth.currentUser.displayName,
+    ownerPost,
     photo: auth.currentUser.photoURL,
     createDate: serverTimestamp(),
     id: auth.currentUser.uid,
     likes,
   });
 };
-
 // Da instrucciones para mostrar los post
 export const queryInstruction = () => query((collection(db, 'post')), orderBy('createDate', 'desc'));
 

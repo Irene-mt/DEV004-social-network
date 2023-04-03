@@ -52,21 +52,23 @@ export const post = () => {
       if (docSnap.exists()) {
         const nameF = docSnap.data().displayName;
         nameUser.textContent = nameF;
+
+        btnCreatePost.addEventListener('click', (e) => {
+          e.preventDefault();
+          createPost(textArea.value, docSnap.data().displayName)
+            .then(() => {
+              onNavigate('/feed');
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              return errorCode;
+            });
+        });
       }
     });
   }
   // Botón de crear post
-  btnCreatePost.addEventListener('click', (e) => {
-    e.preventDefault();
-    createPost(textArea.value)
-      .then(() => {
-        onNavigate('/feed');
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        return errorCode;
-      });
-  });
+  
 
   return postSection;
 };

@@ -69,7 +69,6 @@ export const feed = () => {
   feedSection.appendChild(divPost);
   // Llena la información del usuario
   const user = auth.currentUser;
-  console.log(user)
   if (user !== null) {
     user.providerData.forEach(async (profile) => {
       const photo = profile.photoURL;
@@ -180,8 +179,8 @@ export const feed = () => {
       }
       nameUserPost.textContent = posts.data().ownerPost;
       textPost.textContent = posts.data().post;
-      const owner = posts.data().ownerPost;
-      const userAuth = auth.currentUser.displayName;
+      const owner = posts.data().id;
+      const userAuth = auth.currentUser.uid;
       if (owner === userAuth) {
         btnDelete.style.display = 'flex';
         btnEdit.style.display = 'flex';
