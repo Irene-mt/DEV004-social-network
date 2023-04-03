@@ -69,6 +69,7 @@ export const feed = () => {
   feedSection.appendChild(divPost);
   // Llena la información del usuario
   const user = auth.currentUser;
+  console.log(user)
   if (user !== null) {
     user.providerData.forEach(async (profile) => {
       const photo = profile.photoURL;
@@ -171,7 +172,12 @@ export const feed = () => {
       containerPosts.append(articlePost);
       feedSection.appendChild(containerPosts);
       // Llenamos cada contendor de post
-      imgUserPost.src = posts.data().photo;
+      
+      if(posts.data().photo == null){
+        imgUserPost.src = './img/user.png';
+      } else {
+        imgUserPost.src = posts.data().photo;
+      }
       nameUserPost.textContent = posts.data().ownerPost;
       textPost.textContent = posts.data().post;
       const owner = posts.data().ownerPost;
@@ -239,7 +245,11 @@ export const feed = () => {
             modalToEdit.style.display = 'grid';
             const document = await getPost(posts.id);
             const post = document.data();
-            modalToEdit.querySelector('.userImgEdit').src = post.photo;
+            if(post.photo === null){
+              modalToEdit.querySelector('.userImgEdit').src = './img/user.png';
+            } else {
+              modalToEdit.querySelector('.userImgEdit').src = post.photo;
+            }
             modalToEdit.querySelector('.nameUserEdit').textContent = post.ownerPost;
             modalToEdit.querySelector('.textAreaEdit').value = post.post;
             const btnConfirmEdit = modalToEdit.querySelector('.editPostConfirm');
