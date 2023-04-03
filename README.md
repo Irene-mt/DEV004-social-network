@@ -173,9 +173,9 @@ Además la paleta de color contiene 5 colores que denotan un espacio cálido y a
 
 ### 5.3 Prototipo de alta fidelidad
 
-Se realizaron dos archivos en figma, uno para la versión móvil y otro para la versión web. 
-![Prototipo móvil](https://www.figma.com/proto/qi2Lr1lWLbV151LkK4pVRA/Social-network?node-id=1-4&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A4)
-![Prototipo web](https://www.figma.com/proto/IbQmNesQoSyvpGqBE2KWZK/Home-helpers-DESKTOP?node-id=1-2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2)
+Se realizaron dos archivos en figma, uno para la versión móvil y otro para la versión web.
+[Prototipo móvil](https://www.figma.com/proto/qi2Lr1lWLbV151LkK4pVRA/Social-network?node-id=1-4&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A4)
+[Prototipo web](https://www.figma.com/proto/IbQmNesQoSyvpGqBE2KWZK/Home-helpers-DESKTOP?node-id=1-2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2)
 
 ## 6. Consideraciones del comportamiento de la interfaz de usuario
 
@@ -221,7 +221,7 @@ Se realizaron un total de 15 tests, que evalúan 5 funciones del código.
 
 ## 8. Resultado final
 
-![Página desplegada](https://64246c325a8e9800b803f21f--elegant-maamoul-076eff.netlify.app/)
+Aquí puedes encontrar la [página desplegada](https://64246c325a8e9800b803f21f--elegant-maamoul-076eff.netlify.app/)
 
 ### 8.1 Versión móvil
 
